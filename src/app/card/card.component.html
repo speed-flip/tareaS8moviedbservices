@@ -1,0 +1,11 @@
+<div class="card">
+  <img [alt]="'img' + '-' + movie.title" [src]="'https://image.tmdb.org/t/p/original' + movie.backdrop_path">
+  <div class="card-body">
+    <h3>{{movie.title}}</h3>
+    <p class="date">
+      Fecha de publicación:
+      <span>{{movie.release_date | date:'dd-MM-YYYY'}}</span>
+    </p>
+    <p>{{movie.overview}}</p>
+  </div>
+</div>

@@ -21,3 +21,11 @@
     </svg>
   </a>
 </div>
+
+<p class="mt-10" *ngIf="gettingMovies; else results">Cargando...</p>
+
+<ng-template #results>
+  <div class="mt-10 container-movies">
+    <app-card *ngFor="let movie of movies" [movie]="movie"></app-card>
+  </div>
+</ng-template>
